@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  min-height: 80px;
+}
+.container {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+.img-container-after,
+.img-container-before {
+  position: absolute;
+  width: 4683px;
+  height: 743px;
+}
+.img-container-before {
+  width: 20px;
+  overflow: hidden;
+}
+img {
+  width: 4683px;
+  height: 743px;
+  object-fit: cover;
+}
+
+.slider {
+  width: 0.1rem;
+  background: white;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0%);
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 1080px) {
+  .container {
+    position: relative;
+    width: 468px;
+    height: 74px;
+  }
+  .img-container-after,
+  .img-container-before {
+    position: absolute;
+    width: 468px;
+    height: 74px;
+  }
+  .img-container-before {
+    width: 45px;
+    overflow: hidden;
+  }
+  img {
+    width: 468px;
+    height: 74px;
+    object-fit: cover;
+  }
+}
